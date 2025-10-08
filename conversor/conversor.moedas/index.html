@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversor de Moeda</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/custom-select.css" />
+</head>
+
+<body>
+    <h1>Conversor de Moeda</h1>
+
+    <form id="conversor">
+        <input type="number" id="valor" name="valor" placeholder="Informe o valor" required />
+        <div class="custom-select-container">
+            <label for="moeda"><strong>Converter de:</strong></label>
+            <div class="custom-select-wrapper">
+                <div class="custom-select" id="select-de">
+                    <div class="selected">
+                        <img src="css/bandeira-br.png" alt="BRL" />
+                        <span>BRL (R$)</span>
+                    </div>
+                    <ul class="options">
+                        <li data-value="BRL"><img src="css/bandeira-br.png" alt="BRL"> BRL (R$)</li>
+                        <li data-value="USD"><img src="css/bandeira-usa.png" alt="USD"> Dólar (US$)</li>
+                        <li data-value="EUR"><img src="css/bandeira-euro.png" alt="EUR"> Euro (€)</li>
+                    </ul>
+                </div>
+                <input type="hidden" name="de" id="de" value="BRL" />
+            </div>
+
+            <div class="custom-select-wrapper">
+                <label><strong>Para:</strong></label>
+                <div class="custom-select" id="select-para">
+                    <div class="selected">
+                        <img src="css/bandeira-usa.png" alt="USD" />
+                        <span>Dólar (US$)</span>
+                    </div>
+                    <ul class="options">
+                        <li data-value="BRL"><img src="css/bandeira-br.png" alt="BRL"> BRL (R$)</li>
+                        <li data-value="USD"><img src="css/bandeira-usa.png" alt="USD"> Dólar (US$)</li>
+                        <li data-value="EUR"><img src="css/bandeira-euro.png" alt="EUR"> Euro (€)</li>
+                    </ul>
+                </div>
+                <input type="hidden" name="para" id="para" value="USD" />
+            </div>
+
+            <div class="botao">
+                <button type="submit">Converter</button>
+            </div>
+    </form>
+    <div id="erro"></div>
+    <div id="resultado"></div>
+    <script src="js/custom-select.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}     
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primaria: #76a2bb;
+    --secundaria: #44545e;
+    --escuro: #08151d;
+    --preto: #000000;
+    --claro: #e6f2f9;
+    --transparente: rgba(29, 50, 68, 0.8);
+}
+
+body {
+    background-color: var(--escuro);
+    color: var(--claro);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;  
+}
+
+h1 {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    min-height: 20vh;
+    font-size: 3rem;
+}
+input[type="number"],
+.valor,
+button {
+    width: 200px;
+    height: 40px;
+    font-size: 18px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: var(--claro);
+    color: var(--secundaria);
+}
+
+.custom-select-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;  /* Alinha à esquerda do container */
+  width: 250px;
+  margin: 10px 0;
+}
+
+.custom-select-container label {
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: var(--claro);
+}
+
+.custom-select-wrapper {
+  position: relative;
+  width: 100%;  /* Usa o mesmo width do container */
+}
+
+.custom-select {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+    user-select: none;
+    
+}
+
+.custom-select .selected {
+    border: 1px solid var(--primaria);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    background: var(--claro);
+    color: var(--secundaria);
+}
+
+.custom-select .selected img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.custom-select .options {
+    position: absolute;
+    width: 100%;
+    border: 1px solid var(--primaria);
+    border-top: none;
+    background: var(--primaria);
+    display: none;
+    z-index: 10;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.custom-select.open .options {
+    display: block;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.custom-select .options li {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.custom-select .options li:hover {
+    background: var(--claro);
+    color: var(--escuro);
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.custom-select .options img {
+    width: 20px;
+    margin-right: 10px;
+}
